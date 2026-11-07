@@ -1,0 +1,1321 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap');
+
+:root {
+  font-family: 'DM Sans', sans-serif;
+  color: #202b3c;
+  background: #f6f8fc;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-optical-sizing: auto;
+  font-weight: 400;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+button,
+a {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+.app {
+  min-height: 100vh;
+}
+
+.sidebar {
+  width: 250px;
+  background: #ffffff;
+  border-right: 1px solid #e9edf4;
+  padding: 30px 20px;
+  position: fixed;
+  inset: 0 auto 0 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  font: 800 22px 'Manrope', sans-serif;
+  color: #17253b;
+  margin-bottom: 54px;
+}
+
+.brand-icon {
+  display: grid;
+  place-items: center;
+  width: 37px;
+  height: 37px;
+  border-radius: 12px;
+  background: #4f66e8;
+  color: white;
+}
+
+.nav-heading,
+.eyebrow,
+.welcome-label {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+}
+
+.nav-heading {
+  color: #9ba5b5;
+  margin: 0 0 15px 10px;
+}
+
+.navigation {
+  display: grid;
+  gap: 8px;
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  padding: 13px 12px;
+  border-radius: 10px;
+  text-decoration: none;
+  color: #788499;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.nav-link span {
+  width: 20px;
+  text-align: center;
+  font-size: 18px;
+}
+
+.nav-link.active {
+  color: #4f66e8;
+  background: #eef1ff;
+}
+
+.sidebar-bottom {
+  margin-top: auto;
+  border-top: 1px solid #edf0f5;
+  padding-top: 22px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.avatar {
+  width: 38px;
+  height: 38px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: #e5eaff;
+  color: #4f66e8;
+  font-weight: 700;
+}
+
+.sidebar-bottom strong {
+  font-size: 12px;
+}
+
+.sidebar-bottom p {
+  color: #939daf;
+  font-size: 10px;
+  margin: 4px 0 0;
+}
+
+.main-content {
+  margin-left: 250px;
+  padding: 38px 45px;
+  max-width: 1600px;
+}
+
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.eyebrow {
+  color: #8995aa;
+  margin: 0 0 8px;
+}
+
+h1,
+h2,
+p {
+  margin-top: 0;
+}
+
+h1,
+h2 {
+  font-family: 'Manrope', sans-serif;
+}
+
+h1 {
+  font-size: 29px;
+  letter-spacing: -1px;
+  margin-bottom: 0;
+}
+
+.primary-button,
+.secondary-button {
+  border-radius: 9px;
+  padding: 12px 17px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.primary-button {
+  color: white;
+  background: #4f66e8;
+  border: 1px solid #4f66e8;
+  box-shadow: 0 5px 12px #4f66e822;
+}
+
+.primary-button:hover {
+  background: #3d53d0;
+}
+
+.welcome {
+  background: linear-gradient(110deg, #4e63df, #7184f0);
+  border-radius: 17px;
+  padding: 30px 34px;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 25px;
+}
+
+.welcome-label {
+  opacity: 0.8;
+  margin-bottom: 11px;
+}
+
+.welcome h2 {
+  font-size: 24px;
+  margin-bottom: 9px;
+}
+
+.welcome p:last-child {
+  font-size: 12px;
+  line-height: 1.7;
+  margin-bottom: 0;
+  color: #eef0ff;
+}
+
+.welcome-symbol {
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  width: 66px;
+  height: 66px;
+  border-radius: 20px;
+  background: #ffffff24;
+  font-size: 38px;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 17px;
+  margin-bottom: 35px;
+}
+
+.stat-card {
+  background: white;
+  border: 1px solid #e9edf4;
+  border-radius: 13px;
+  padding: 20px;
+}
+
+.stat-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+  color: #7d899c;
+  font-size: 11px;
+}
+
+.stat-symbol {
+  display: grid;
+  place-items: center;
+  width: 33px;
+  height: 33px;
+  border-radius: 10px;
+  background: #eef1ff;
+  color: #4f66e8;
+  font-size: 17px;
+}
+
+.stat-value {
+  display: block;
+  font: 800 29px 'Manrope', sans-serif;
+  margin-top: 15px;
+  color: #1d2b42;
+}
+
+.stat-card p {
+  font-size: 10px;
+  color: #9ba5b5;
+  margin: 7px 0 0;
+}
+
+.applications-section {
+  background: white;
+  border: 1px solid #e9edf4;
+  border-radius: 15px;
+  padding: 25px;
+}
+
+.section-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 22px;
+}
+
+.section-heading h2 {
+  font-size: 18px;
+  margin-bottom: 6px;
+}
+
+.section-heading p {
+  color: #929daf;
+  font-size: 11px;
+  margin-bottom: 0;
+}
+
+.secondary-button {
+  color: #5268dc;
+  background: white;
+  border: 1px solid #dce2fa;
+}
+
+.table-wrapper {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  white-space: nowrap;
+}
+
+th {
+  color: #9aa4b4;
+  font-size: 9px;
+  letter-spacing: 0.8px;
+  font-weight: 700;
+  background: #fafbfe;
+  padding: 14px 12px;
+}
+
+td {
+  border-bottom: 1px solid #f0f2f7;
+  padding: 17px 12px;
+  font-size: 11px;
+  color: #7c889a;
+}
+
+tbody tr:last-child td {
+  border-bottom: none;
+}
+
+td strong,
+.company-name {
+  display: block;
+}
+
+td strong {
+  color: #28364a;
+  font-size: 12px;
+  margin-bottom: 5px;
+}
+
+.company-name {
+  font-size: 10px;
+  color: #9aa4b4;
+}
+
+.status-badge {
+  display: inline-block;
+  padding: 6px 10px;
+  border-radius: 20px;
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.status-applied {
+  color: #4963d8;
+  background: #edf0ff;
+}
+
+.status-interview {
+  color: #a16b11;
+  background: #fff4db;
+}
+
+.status-offer {
+  color: #21845e;
+  background: #e5f8ef;
+}
+
+.status-rejected {
+  color: #c05252;
+  background: #ffeded;
+}
+
+@media (max-width: 1100px) {
+  .main-content {
+    padding: 30px 25px;
+  }
+
+  .stats-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 700px) {
+  .sidebar {
+    position: static;
+    width: 100%;
+    padding: 18px;
+  }
+
+  .brand {
+    margin-bottom: 25px;
+  }
+
+  .nav-heading,
+  .sidebar-bottom {
+    display: none;
+  }
+
+  .navigation {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .nav-link {
+    padding: 10px;
+  }
+
+  .main-content {
+    margin-left: 0;
+    padding: 25px 16px;
+  }
+
+  .topbar {
+    align-items: flex-start;
+  }
+
+  h1 {
+    font-size: 25px;
+  }
+
+  .primary-button {
+    padding: 11px;
+  }
+
+  .welcome {
+    padding: 24px 20px;
+  }
+
+  .welcome h2 {
+    font-size: 20px;
+  }
+
+  .welcome-symbol {
+    width: 45px;
+    height: 45px;
+    font-size: 25px;
+  }
+
+  .stats-grid {
+    gap: 10px;
+  }
+
+  .stat-card {
+    padding: 15px;
+  }
+
+  .stat-top {
+    align-items: flex-start;
+  }
+
+  .stat-symbol {
+    width: 27px;
+    height: 27px;
+  }
+
+  .applications-section {
+    padding: 16px;
+  }
+}
+
+.add-application-section {
+  background: #ffffff;
+  padding: 28px;
+  margin-bottom: 24px;
+  border: 1px solid #e5eaf3;
+  border-radius: 16px;
+}
+
+.add-application-section h2 {
+  margin: 0 0 24px;
+  color: #172b4d;
+  font-size: 22px;
+}
+
+.application-form {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.application-form input,
+.application-form select,
+.application-form textarea {
+  width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+  padding: 12px 14px;
+  border: 1px solid #d9e1ef;
+  border-radius: 8px;
+  background: #ffffff;
+  color: #172b4d;
+  font: inherit;
+}
+
+.application-form input:focus,
+.application-form select:focus,
+.application-form textarea:focus {
+  outline: none;
+  border-color: #5267ed;
+  box-shadow: 0 0 0 3px rgba(82, 103, 237, 0.12);
+}
+
+.application-form textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+@media (max-width: 640px) {
+  .application-form {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Modal background overlay */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background: rgba(15, 23, 42, 0.55);
+}
+
+/* Modal popup */
+.application-modal {
+  width: 100%;
+  max-width: 600px;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-sizing: border-box;
+  padding: 28px;
+  border-radius: 16px;
+  background: #ffffff;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+}
+
+/* Modal heading and close button */
+.modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.modal-header h2 {
+  margin: 0;
+  color: #172b4d;
+  font-size: 22px;
+}
+
+.modal-header button {
+  width: 36px;
+  height: 36px;
+  border: none;
+  border-radius: 8px;
+  background: #f1f5f9;
+  color: #334155;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.application-modal > p {
+  margin: 10px 0 24px;
+  color: #64748b;
+  font-size: 14px;
+}
+
+/* Mobile layout */
+@media (max-width: 640px) {
+  .application-modal {
+    padding: 20px;
+  }
+}
+
+.application-form {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.application-form label {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  color: #334155;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.application-form input,
+.application-form select,
+.application-form textarea {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 11px 12px;
+  border: 1px solid #dbe2ea;
+  border-radius: 8px;
+  background: #fff;
+  color: #172b4d;
+  font: inherit;
+}
+
+.application-form input:focus,
+.application-form select:focus,
+.application-form textarea:focus {
+  outline: 2px solid #bfdbfe;
+  border-color: #3b82f6;
+}
+
+.application-form textarea {
+  resize: vertical;
+}
+
+.application-form label:nth-last-of-type(2),
+.application-form label:last-of-type,
+.modal-actions {
+  grid-column: 1 / -1;
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.cancel-button {
+  padding: 10px 16px;
+  border: 1px solid #dbe2ea;
+  border-radius: 8px;
+  background: #fff;
+  color: #334155;
+  cursor: pointer;
+}
+
+@media (max-width: 520px) {
+  .application-form {
+    grid-template-columns: 1fr;
+  }
+
+  .application-form label,
+  .modal-actions {
+    grid-column: 1;
+  }
+}
+
+.login-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  box-sizing: border-box;
+  background: #f1f5f9;
+}
+
+.login-card {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+  max-width: 400px;
+  padding: 32px;
+  box-sizing: border-box;
+  border-radius: 16px;
+  background: white;
+  box-shadow: 0 12px 35px rgba(15, 23, 42, 0.1);
+}
+
+.login-card h1 {
+  margin: 0;
+  color: #172b4d;
+}
+
+.login-card > p {
+  color: #64748b;
+}
+
+.login-card input {
+  padding: 12px;
+  border: 1px solid #dbe2ea;
+  border-radius: 8px;
+  font: inherit;
+}
+
+.login-card button {
+  margin-top: 12px;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background: #304ee8;
+  color: white;
+  font: inherit;
+  cursor: pointer;
+}
+
+.login-card button:disabled {
+  opacity: 0.7;
+  cursor: wait;
+}
+
+.login-error {
+  color: #dc2626;
+  font-size: 14px;
+}
+
+/* Registration success popup overlay */
+.success-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background: rgba(15, 23, 42, 0.6);
+}
+
+/* Success popup card */
+.success-popup {
+  width: 100%;
+  max-width: 420px;
+  box-sizing: border-box;
+  padding: 32px;
+  border-radius: 18px;
+  background: #ffffff;
+  text-align: center;
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.2);
+}
+
+.success-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  margin: 0 auto 18px;
+  border-radius: 50%;
+  background: #dcfce7;
+  color: #15803d;
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.success-popup h2 {
+  margin: 0 0 12px;
+  color: #172b4d;
+  font-size: 24px;
+}
+
+.success-popup p {
+  margin: 0 0 24px;
+  color: #64748b;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.success-popup button {
+  width: 100%;
+  padding: 13px 18px;
+  border: none;
+  border-radius: 9px;
+  background: #304fee;
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.success-popup button:hover {
+  background: #233ed0;
+}
+
+.application-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.application-actions button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.delete-button {
+  padding: 10px 14px;
+  border: 1px solid #fecaca;
+  border-radius: 10px;
+  background: #fff1f2;
+  color: #be123c;
+  font: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.delete-button:hover:not(:disabled) {
+  background: #ffe4e6;
+}
+
+.form-error {
+  color: #be123c;
+  font-size: 14px;
+}
+
+/* Custom delete confirmation popup */
+.delete-confirm-modal {
+  max-width: 450px;
+}
+
+.delete-confirm-modal h2 {
+  color: #1e293b;
+}
+
+.delete-warning {
+  color: #be123c;
+  font-size: 14px;
+  margin-top: 12px;
+}
+
+.delete-confirm-modal .delete-button {
+  background: #dc2626;
+  color: white;
+  border: 1px solid #dc2626;
+}
+
+.delete-confirm-modal .delete-button:hover:not(:disabled) {
+  background: #b91c1c;
+}
+
+.delete-confirm-modal .delete-button:disabled,
+.delete-confirm-modal .cancel-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.search-bar-container {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+}
+
+.job-search-input {
+  flex: 1;
+  min-width: 220px;
+  padding: 12px 16px;
+  border: 1px solid #d1d5db;
+  border-radius: 10px;
+  background: #fff;
+  color: #1f2937;
+  font: inherit;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.job-search-input:focus {
+  border-color: #6366f1;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.12);
+}
+
+.search-bar-container button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+@media (max-width: 600px) {
+  .search-bar-container {
+    align-items: stretch;
+  }
+
+  .job-search-input {
+    flex-basis: 100%;
+  }
+}
+
+.job-status-filter {
+  padding: 12px 14px;
+  border: 1px solid #d1d5db;
+  border-radius: 10px;
+  background: #fff;
+  color: #1f2937;
+  font: inherit;
+  cursor: pointer;
+  outline: none;
+}
+
+.job-status-filter:focus {
+  border-color: #6366f1;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.12);
+}
+
+/* JobTrack responsive navigation and dashboard layout */
+.dashboard-heading {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 0;
+}
+.mobile-menu-button,
+.mobile-menu-overlay { display: none; }
+.main-content { min-width: 0; }
+
+@media (max-width: 700px) {
+  .app { width: 100%; min-height: 100vh; overflow-x: clip; }
+  .sidebar {
+    position: fixed; inset: 0 auto 0 0; z-index: 1001;
+    width: min(280px, 85vw); height: 100dvh; min-height: 0;
+    overflow-y: auto; padding: 24px 18px;
+    transform: translateX(-105%); transition: transform 0.25s ease;
+    box-shadow: none;
+  }
+  .app.mobile-menu-open .sidebar {
+    transform: translateX(0);
+    box-shadow: 12px 0 35px rgba(15, 23, 42, 0.15);
+  }
+  .app.mobile-menu-open .nav-heading { display: block; }
+  .app.mobile-menu-open .sidebar-bottom { display: flex; }
+  .app.mobile-menu-open .navigation { display: flex; flex-direction: column; flex-wrap: nowrap; }
+  .mobile-menu-button {
+    display: inline-flex; align-items: center; justify-content: center;
+    flex: 0 0 42px; width: 42px; height: 42px; padding: 0;
+    border: 1px solid #e2e8f0; border-radius: 10px;
+    background: #fff; color: #334155; font-size: 22px;
+  }
+  .mobile-menu-overlay {
+    display: block; position: fixed; inset: 0; z-index: 1000;
+    width: 100%; height: 100%; padding: 0; border: 0; border-radius: 0;
+    background: rgba(15, 23, 42, 0.45);
+  }
+  .main-content { width: 100%; max-width: none; margin-left: 0; padding: 22px 16px; }
+  .topbar { align-items: center; flex-wrap: wrap; gap: 14px; }
+  .topbar-actions { display: flex; flex-wrap: wrap; gap: 8px; }
+  .stats-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+  .welcome { gap: 12px; padding: 24px 20px; }
+  .welcome > div:first-child { min-width: 0; }
+  .welcome-symbol { width: 45px; height: 45px; font-size: 25px; }
+  .applications-section { min-width: 0; padding: 16px; }
+  .search-bar-container { align-items: stretch; gap: 10px; }
+  .job-search-input { flex: 1 1 100%; width: 100%; min-width: 0; }
+  .job-status-filter { flex: 1 1 100%; min-width: 0; }
+  .search-bar-container button { flex: 1 1 auto; }
+  .table-wrapper { width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+  .table-wrapper table { min-width: 650px; }
+}
+@media (max-width: 380px) {
+  .main-content { padding: 18px 12px; }
+  .stats-grid { grid-template-columns: 1fr; }
+  .topbar-actions { width: 100%; }
+  .topbar-actions button { flex: 1; }
+  .welcome-symbol { display: none; }
+}
+@media (prefers-reduced-motion: reduce) { .sidebar { transition: none; } }
+
+/* Additional mobile navigation accessibility/layout rules */
+.dashboard-heading > div { min-width: 0; }
+.mobile-menu-button:focus-visible {
+  outline: 3px solid rgba(79, 102, 232, 0.35);
+  outline-offset: 2px;
+}
+
+/* =========================================================
+   RESPONSIVE APPLICATIONS TABLE
+   ========================================================= */
+@media (max-width: 600px) {
+  .table-wrapper {
+    width: 100%;
+    max-width: 100%;
+    overflow: visible;
+  }
+
+  .table-wrapper table {
+    display: block;
+    width: 100%;
+    min-width: 0 !important;
+    table-layout: auto;
+    border-collapse: separate;
+    border-spacing: 0;
+  }
+
+  .table-wrapper thead {
+    display: none;
+  }
+
+  .table-wrapper tbody {
+    display: block;
+    width: 100%;
+  }
+
+  .table-wrapper tbody tr {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 12px 14px;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 16px 12px;
+    border-bottom: 1px solid #edf0f5;
+  }
+
+  .table-wrapper tbody td {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 5px;
+    width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+    padding: 0;
+    border: 0;
+    white-space: normal;
+    overflow-wrap: anywhere;
+    word-break: normal;
+    font-size: 12px;
+  }
+
+  .table-wrapper tbody td::before {
+    content: attr(data-label);
+    display: block;
+    color: #94a3b8;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: .05em;
+    line-height: 1.3;
+  }
+
+  .table-wrapper tbody td:first-child {
+    grid-column: 1 / -1;
+    display: block;
+  }
+
+  .table-wrapper tbody td:first-child::before {
+    display: none;
+  }
+
+  .table-wrapper tbody td:first-child strong {
+    display: block;
+    font-size: 14px;
+    line-height: 1.45;
+    overflow-wrap: anywhere;
+  }
+
+  .table-wrapper tbody td:first-child .company-name {
+    display: block;
+    margin-top: 4px;
+    font-size: 11px;
+    line-height: 1.4;
+  }
+
+  .table-wrapper tbody td:nth-child(4) {
+    grid-column: 1 / -1;
+  }
+
+  .table-wrapper tbody td:nth-child(4) .status-badge {
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+    width: max-content !important;
+    max-width: 100%;
+    padding: 7px 11px;
+    white-space: nowrap !important;
+    overflow-wrap: normal !important;
+    word-break: keep-all !important;
+    writing-mode: horizontal-tb !important;
+    letter-spacing: normal;
+    line-height: 1.2;
+  }
+
+  .table-wrapper tbody td:nth-child(5) {
+    grid-column: 1 / -1;
+    display: block;
+    width: 100%;
+  }
+
+  .table-wrapper tbody td:nth-child(5)::before {
+    margin-bottom: 8px;
+  }
+
+  .table-wrapper .application-actions {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+    width: 100%;
+    min-width: 0;
+  }
+
+  .table-wrapper .application-actions button {
+    display: inline-flex !important;
+    flex: 0 0 auto !important;
+    align-items: center;
+    justify-content: center;
+    width: auto !important;
+    min-width: 84px;
+    max-width: 100%;
+    box-sizing: border-box;
+    padding: 10px 15px;
+    white-space: nowrap !important;
+    overflow-wrap: normal !important;
+    word-break: keep-all !important;
+    writing-mode: horizontal-tb !important;
+    line-height: 1.2;
+  }
+
+  .table-wrapper tbody tr:has(td[colspan]) {
+    display: block;
+  }
+
+  .table-wrapper tbody td[colspan] {
+    display: block;
+    padding: 8px 0;
+  }
+
+  .table-wrapper tbody td[colspan]::before {
+    content: none;
+  }
+
+  .pagination,
+  .pagination-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+    max-width: 100%;
+  }
+}
+
+/* =========================================================
+   ADD / EDIT APPLICATION MODAL
+   ========================================================= */
+/* JobTrack Add/Edit Application modal fix.
+   Existing dashboard/sidebar/mobile styles are preserved above.
+   The Tailwind form has an inner grid wrapper, so the form itself must
+   not also be a two-column grid (otherwise the inner grid gets squeezed). */
+.application-modal .application-form {
+  display: block;
+  width: 100%;
+  min-width: 0;
+}
+
+.application-modal .application-form > div {
+  width: 100%;
+  min-width: 0;
+}
+
+.application-modal .application-form label {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-width: 0;
+}
+
+.application-modal .application-form input,
+.application-modal .application-form select,
+.application-modal .application-form textarea {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+}
+
+.application-modal {
+  width: min(100%, 672px);
+  max-width: 672px;
+  max-height: calc(100dvh - 24px);
+  overflow-y: auto;
+}
+
+@media (max-width: 640px) {
+  .modal-overlay {
+    align-items: flex-start;
+    padding: 12px;
+    overflow-y: auto;
+  }
+
+  .application-modal {
+    width: 100%;
+    max-width: 100%;
+    max-height: none;
+    margin: 0;
+  }
+}
+
+/* =========================================================
+   DARK MODE — BASE THEME
+   ========================================================= */
+/* JobTrack dark mode */
+.theme-toggle{display:inline-flex;align-items:center;justify-content:center;gap:7px;min-height:42px;padding:9px 13px;border:1px solid #dce2fa;border-radius:10px;background:#fff;color:#334155;font-size:12px;font-weight:700;white-space:nowrap}
+.theme-toggle:hover{background:#f1f5f9}
+.theme-toggle span:first-child{font-size:16px}
+.app[data-theme="dark"]{color:#e2e8f0;background:#0f172a;color-scheme:dark}
+.app[data-theme="dark"] .main-content{color:#e2e8f0}
+.app[data-theme="dark"] .sidebar,.app[data-theme="dark"] .applications-section,.app[data-theme="dark"] .stat-card,.app[data-theme="dark"] .application-modal,.app[data-theme="dark"] .success-popup{background:#1e293b;border-color:#334155;color:#e2e8f0}
+.app[data-theme="dark"] .sidebar{border-right-color:#334155}
+.app[data-theme="dark"] .brand,.app[data-theme="dark"] .sidebar-bottom strong,.app[data-theme="dark"] h1,.app[data-theme="dark"] h2,.app[data-theme="dark"] .stat-value,.app[data-theme="dark"] td strong,.app[data-theme="dark"] .modal-header h2,.app[data-theme="dark"] .add-application-section h2{color:#f8fafc}
+.app[data-theme="dark"] .nav-link{color:#a8b5c8}
+.app[data-theme="dark"] .nav-link.active{color:#a5b4fc;background:#303b69}
+.app[data-theme="dark"] .sidebar-bottom{border-top-color:#334155}
+.app[data-theme="dark"] .avatar{background:#303b69;color:#c7d2fe}
+.app[data-theme="dark"] .eyebrow,.app[data-theme="dark"] .nav-heading,.app[data-theme="dark"] .stat-top,.app[data-theme="dark"] .stat-card p,.app[data-theme="dark"] .section-heading p,.app[data-theme="dark"] .company-name,.app[data-theme="dark"] .sidebar-bottom p{color:#94a3b8}
+.app[data-theme="dark"] .stat-symbol{background:#303b69;color:#c7d2fe}
+.app[data-theme="dark"] .secondary-button,.app[data-theme="dark"] .cancel-button,.app[data-theme="dark"] .theme-toggle{background:#273449;border-color:#475569;color:#c7d2fe}
+.app[data-theme="dark"] .secondary-button:hover,.app[data-theme="dark"] .theme-toggle:hover{background:#334155}
+.app[data-theme="dark"] .table-wrapper{border-color:#334155}
+.app[data-theme="dark"] th{background:#273449;color:#a8b5c8}
+.app[data-theme="dark"] td{color:#cbd5e1;border-bottom-color:#334155}
+.app[data-theme="dark"] tbody tr{border-color:#334155}
+.app[data-theme="dark"] tbody tr:hover{background:#273449}
+.app[data-theme="dark"] .job-search-input,.app[data-theme="dark"] .job-status-filter,.app[data-theme="dark"] .application-form input,.app[data-theme="dark"] .application-form select,.app[data-theme="dark"] .application-form textarea{background:#0f172a;border-color:#475569;color:#e2e8f0}
+.app[data-theme="dark"] .application-form label{color:#cbd5e1}
+.app[data-theme="dark"] .modal-header button{background:#334155;color:#e2e8f0}
+.app[data-theme="dark"] .application-modal>p{color:#cbd5e1}
+.app[data-theme="dark"] .delete-confirm-modal h2{color:#f8fafc}
+.app[data-theme="dark"] .mobile-menu-button{background:#273449;color:#e2e8f0;border-color:#475569}
+.app[data-theme="dark"] .add-application-section{background:#1e293b;border-color:#334155}
+.app[data-theme="dark"] .bg-white{background-color:#1e293b!important}
+.app[data-theme="dark"] .bg-slate-50{background-color:#273449!important}
+.app[data-theme="dark"] .bg-slate-100{background-color:#334155!important}
+.app[data-theme="dark"] .text-slate-800,.app[data-theme="dark"] .text-slate-700,.app[data-theme="dark"] .text-slate-600,.app[data-theme="dark"] .text-slate-500{color:#cbd5e1!important}
+.app[data-theme="dark"] .border-slate-100,.app[data-theme="dark"] .border-slate-200{border-color:#334155!important}
+.app[data-theme="dark"] .hover\\:bg-slate-50:hover,.app[data-theme="dark"] .hover\\:bg-slate-50\\/70:hover{background-color:#273449!important}
+.app[data-theme="dark"] .text-indigo-700{color:#c7d2fe!important}
+.app[data-theme="dark"] .bg-indigo-50{background-color:#303b69!important}
+@media(max-width:700px){.theme-toggle{min-height:40px;padding:8px 10px}.theme-toggle-label{display:none}}
+/* =========================================================
+   DARK MODE — INTERACTIVE STATES
+   ========================================================= */
+/* Dark mode: input hover and focus fix */
+.app[data-theme="dark"] .job-search-input:hover,
+.app[data-theme="dark"] .job-search-input:focus,
+.app[data-theme="dark"] .job-status-filter:hover,
+.app[data-theme="dark"] .job-status-filter:focus {
+  background-color: #0f172a !important;
+  color: #e2e8f0 !important;
+  border-color: #6366f1;
+}
+
+/* Dropdown options */
+.app[data-theme="dark"] .job-status-filter option {
+  background-color: #1e293b;
+  color: #e2e8f0;
+}
+/* Dark mode sidebar hover fix */
+.app[data-theme="dark"] .nav-link {
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.app[data-theme="dark"] .nav-link:hover {
+  background-color: #334155 !important;
+  color: #ffffff !important;
+}
+
+/* Active navigation item */
+.app[data-theme="dark"] .nav-link.active,
+.app[data-theme="dark"] .nav-link.active:hover {
+  background-color: #374579 !important;
+  color: #ffffff !important;
+}
+
+/* =========================================================
+   DARK MODE — INTERVIEW CALENDAR
+   ========================================================= */
+/* Dark mode - Interview Calendar */
+.app[data-theme="dark"] .applications-section .bg-white {
+  background-color: #1e293b !important;
+  color: #e2e8f0;
+}
+
+.app[data-theme="dark"] .applications-section .bg-slate-100 {
+  background-color: #0f172a !important;
+}
+
+.app[data-theme="dark"] .applications-section .text-slate-800,
+.app[data-theme="dark"] .applications-section .text-slate-700 {
+  color: #e2e8f0 !important;
+}
+
+.app[data-theme="dark"] .applications-section .text-slate-500 {
+  color: #94a3b8 !important;
+}
+
+/* Calendar day hover */
+.app[data-theme="dark"] .applications-section button:hover {
+  background-color: #334155 !important;
+  color: #f8fafc !important;
+}
+
+/* Selected date */
+.app[data-theme="dark"] .applications-section button[aria-pressed="true"] {
+  background-color: #3730a3 !important;
+  border-color: #818cf8 !important;
+  color: #ffffff !important;
+}
+
+/* Calendar borders */
+.app[data-theme="dark"] .applications-section .border-slate-200,
+.app[data-theme="dark"] .applications-section .border-slate-100 {
+  border-color: #334155 !important;
+}
