@@ -54,6 +54,12 @@ Instead of maintaining job applications manually, users can manage application s
 - Dark mode and light mode
 - Interactive dashboard
 
+## Screenshots
+
+### Dashboard
+![JobTrack Dashboard](screenshots/dashboard.png)
+
+
 ## Technology Stack
 
 **Frontend**
